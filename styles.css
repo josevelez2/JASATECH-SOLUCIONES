@@ -1,0 +1,253 @@
+/* VARIABLES CORPORATIVAS */
+:root {
+    --morado: #35076A;
+    --menta: #5BC09C;
+    --gris: #2D2D2D;
+    --blanco: #F5F5F5;
+    --lima: #D4E157;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--blanco);
+    color: var(--gris);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-light {
+    background-color: var(--blanco);
+    padding: 80px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+/* HEADER */
+.header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo-main {
+    font-weight: bold;
+    color: var(--morado);
+}
+
+.logo-sub {
+    display: block;
+    font-size: 12px;
+    color: var(--menta);
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--gris);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--menta);
+}
+
+.btn-cta {
+    background-color: var(--lima);
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(91,192,156,0.2), rgba(53,7,106,0.3));
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: var(--morado);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+}
+
+.hero-buttons a {
+    margin: 0 10px;
+}
+
+.btn-primary {
+    background-color: var(--lima);
+    padding: 12px 24px;
+    text-decoration: none;
+    color: var(--gris);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--menta);
+    color: white;
+}
+
+.btn-secondary {
+    border: 2px solid var(--menta);
+    padding: 12px 24px;
+    text-decoration: none;
+    color: var(--menta);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--menta);
+    color: white;
+}
+
+/* GRID */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image {
+    height: 300px;
+    background: linear-gradient(45deg, var(--menta), var(--morado));
+    border-radius: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* STATS */
+.stats {
+    background-color: var(--gris);
+    color: white;
+    padding: 80px 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 40px;
+    color: var(--lima);
+}
+
+/* CTA */
+.cta {
+    background-color: var(--morado);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--gris);
+    color: var(--blanco);
+    padding: 40px 0 0 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
